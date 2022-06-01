@@ -1,0 +1,312 @@
+History of the Web. 
+
+1960 - Packet switching research - to create networks that could survice teh nukes. packet switching is data in message blocks that are routed seperately. 
+
+late 1960's NPL / ARPANET first private networks. 
+
+1972 - link between the US and Europe by satilite 
+
+1981 - ARPANet expanded.
+
+1981 - IP4 Published TCP/IP - started public availbility to the internet. (rudimentary)
+
+1989 - World wide web proposed - open information system populated with documents you can get access to with urls. 
+
+1990 - first browser using HTML documents. 
+
+1994 - cascading HTML style sheets (CSS) intorduced
+
+1995 - JS introduced - programable actions on the web. 
+
+1999 - Internet on mobile phones. 
+
+2000 - 414M internet users. 
+
+2008 - Google Chrome. 
+
+2017 - 3.9Bn people have internet access. / 47% of all webpage views from mobile devices. 
+
+
+
+How the magic of the web works. 
+
+The WWW is a information space, where documents and other web resources are identigied by Uniform Resource Locators (URLs) interlinked by hypertext links and be accessed via the Internet. 
+
+Ingredients for the Web : 
+HTML Documents (images / documents / other documents)
+URL (Uniform resource locators)
+HTTP Hypertext transfer protocol - magic that can retrieve documents and communicate them to your browser. 
+
+Ingredients for the Web. 
+
+Documents (HTML) are hosted on a web server which will have a URL such as http://server.com/document.HTML
+clients = web browsers desktops laptops / mobile phones / vr headsets. they ask the internet to serve up the document from a URL. HTTP does this serving. 
+CSS & JS is used to style and give the document functionality. 
+
+HTTP (GET & POST)
+
+
+Why Learn about HTML, CSS & JS ? 
+
+New to these topics learn about them to know what they are on a high level, when you know this you know why they are relevent for the web and software dev. 
+How people use them. 
+already expierenced is still useful as it reinforces and sharpes your understanding. 
+
+
+
+
+
+
+Display the web with HTML. 
+basics of HTML hypertext markup laungauge. 
+
+Where did HTML come from ? 
+
+HTML is the standard markup laungauge for creating web pages and web applications. 
+you use it to control the presentation of data, its not a programmign laungauge. 
+
+HTML started in 1990 v1.0. 
+1993 first draft of HTML specification - actual standard to be used by all web browsers. 
+1995 - HTML 2.0 
+1997 - HTML 3.2
+1997 - HTML 4.0 
+1999 - HTML 4.01
+2014 - HTML 5 - large number of new HTML elements for more expressive markup and interactive webpages. 
+2016 - HTML 5.1
+2017 - HTML 5.2
+
+How manages the HTML specification ? 
+1990 - Tim Berners Lee - first spec of HTML. 
+1993 - Internet Engineering Task Force (IETF) - proposed first standard.
+1996 - World Wide Web Consortium (W3C) - Takes over founded by Tim Berners Lee
+2000 - ISO / IEC - officially became standardized
+2004 - Web HyperText Application technology working group (WHATWG) - working on HTML 5.0
+
+HTML 5 is now a living standard, there may never be a HTML 6.0 as 5 will just be iterated on. 
+
+
+
+What is HTML ? 
+
+Structure of a HTML Document. .HTM / .HTML 
+they contain various elements in the HTML spec. 
+
+<!DOCTYPE html> - tells the browser the document is HTML. 
+<html> - tells the browsers everything in this element is HTML. 
+    <head> - contains meta information for the document. scripts and styles
+    </head>
+    <body> - the content of the page. 
+    </body>
+</html>
+
+
+example of HTML. 
+
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta charset="utf-8"> - tells the browsers the char encocding. 
+        <title>My HTML Page !</title> - what appears at the top of the browser. 
+    </head>
+    <body> 
+        <div> - indicated everything in this tag belongs together
+            <ul> - UL list with 3 li items that contains text. 
+                <li>This</li>
+                <li>is an</li>
+                <li>unordered list</li>
+            </uk>
+        </div>
+    </body>
+    
+</html>
+
+more expressive elements in HTML 5.0. 
+
+<header> - represents container for introductry content or a nav bar can contain a nav tag. 
+
+<main> - main content of a document. 
+<article> - independent self ocntained content
+<aside> - some content aside from the conent it is placed in. 
+<footer> - contains things like copyright / company address. 
+
+More interactive HTML Elements. 
+
+<audio> - can use to display audio control bar. 
+
+<canvas> - paint on 
+
+<form> - basis for most ineractive websites or applications to post info from browser to the server. 
+
+<input> elements such as buttons. 
+
+<video> play vidoes in the browser
+
+lots more of these exist. 
+
+
+Browser support of HTML Elements. 
+
+caniuse.com. 
+
+HTML is markup laungage - not all web browsers support all elements. 
+
+
+
+
+Working with HTML. 
+Text Editors or IDE's use an IDE as they are good. 
+
+htmllivecode.com - free editor on the web. - useful for trying stuff out. 
+
+Write HTML with a framework 
+you write code in a software laungage using a framework such as PHP 
+framework will generate HTML to be sent to the client. 
+
+Example of a Framework ASP.net MVC
+create cshtml files (C#) in combines C(#) with HTML in the document. 
+
+provides flexibility and features and is much more advanced. 
+
+frameworks 
+PHP - well known as used by wordpress.
+Java - programming laungage with framworks for HTML. 
+ASP.NET MVC
+Ruby 
+Python 
+Node.JS
+Go 
+
+can create frameworks and applications from scratch and create HTMl for you. 
+
+
+
+
+Styling with CSS. 
+Code that tells the browser how to style the HTML. 
+
+Where did CSS come from ? 
+CSS is a style sheet lauaguage that is used fro describing the presentation of a document written in a markup laungage
+
+1994 - CSS first proposed. (W3C added CSS to deliverables of the HTML working group)
+1996 - CSS1 recommendation. started to be adopted by web browsers
+1998 - CSS2 recommendation browser support improved
+2004 - CSS2.1 recommendation
+2011 - CSS2.1 recommendation
+2011 - CSS3- Selectors/Colors
+2012 - CSS3 - Media Queries
+2017 - CSS3 - UI 
+2017 - CSS flexbox level 1 recommendation
+
+
+
+
+What is CSS ? 
+CSS is Awesome ! 
+Inline styles
+Styles in the head
+CSS as a StyleSheet - linked in the head of the HTML document. - best resulability and maintainability. 
+
+
+CSS Syntax Selectors. 
+
+div {
+    color: blue;
+}
+
+.class1 {
+    color:blue;
+}
+
+#para1 {
+    color: blue;
+}
+
+div p {
+    color: blue;
+}
+
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+
+
+CSS Priority 
+Properties are applied based on priority. 
+
+class has a higher priority than elements and ID has a higher priority than class. they overwrite eachother. 
+
+!important has highest priority and will overwrite
+
+if not overwritten it will use the highest value. 
+
+
+Advanced CSS syntax. 
+
+media querys. 
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: green;
+    }
+}
+
+this would make the page responsive, enables a different feel and view depending on the screen size. 
+
+gradient property 
+#grad {
+    background: linear-gradient(red, yellow);
+}
+
+
+Browser support for CSS Syntax. 
+
+you can view it at caniuse.com 
+
+
+
+
+Working with CSS. 
+
+HTML and CSS needs to be linked and the CSS needs to be hosted on the Web Server. 
+
+Web browser does all the work using the CSS file. 
+
+CSS can be created from scratch using a text editor or a IDE (VS Code)
+
+ide will help you autocomplete CSS, this is helpful to speed up development. 
+
+CSS Libraries 
+lots of these exist and most are opensource / free. 
+Bootstrap was created by twitter
+hamburgers.css 
+font-Awesome
+Ionic
+Materialize 
+
+all designed to make life easier for developers. 
+
+
+using bootstrap. 
+
+to link bootstrap link it in the HTML using the bootstrap url. no need to host it on your own web server. 
+
+can then use classes to use the styles from the Bootsrap css library. 
+
+bootstrap can save alot of time. 
+
+
+CSS Preprocessors. 
+
+framework / laun to create CSS files with. 
+
+created becuase CSS is too simplistic and can create large CSS files. 
+
+lots of CSS processors. 
+
+LESS / SASS 
+
+you write your stylecode in the preprocessor
+
+compile it and you get the CSS.
+can be useful to increase your producivity. 
