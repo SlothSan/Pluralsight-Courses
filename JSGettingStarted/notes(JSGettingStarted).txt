@@ -1,0 +1,1007 @@
+Variables. 
+
+What is a variable ? 
+
+Any app we write, needs data. 
+
+JS Script variables are data. 
+
+Data is stored in the Computer memory. a easy way of addressing computer memory. english to represent a number. 
+
+variables need to be declared. 
+
+
+
+How to declare variables
+
+keyword special symbol in JS - let lets us declare variable.
+
+let total = 149.99;
+
+= takes the value and assigns to the variable, end with a semi colon. 
+
+let product = 'hiking boots'
+
+assigns the string to the variable, putting it in quotes treats it as literal text. 
+
+let discounted = true;
+
+true is a boolean so doesn't need quotes JS knows what it is. so is false. 
+
+
+
+Using let to declare variables. 
+let price = 49.99,
+    name = 'Hiking Boots',
+    discounted = false;
+
+
+showMessage(name);
+
+
+
+Variable names
+
+can start with _ $ or a Letter (a)
+ 
+followed by zero or more: _ $ or letter or number.
+
+use descriptive names ie account instead of a. or accountNumber. 
+
+camelnotation for JS variables ie accountNumber second word and any onwards capitalized. 
+
+_accountnumber is valid - _ denotes private variables. 
+
+$accountNumber - generally used for auto generated code. 
+
+_123 - no descript do not use. 
+
+_proto_ - run into these for non standard features. 
+
+name your variable for the data being held to make things clearer !
+
+
+
+
+Common errors with variables.
+wrong syntax / empty / mispelling. 
+
+
+
+
+Changing variables 
+price = 59.99;
+
+
+
+
+Constants. 
+
+set and not change - use const 
+allows devs to look at your code and know its not gonna change. 
+eg 
+const price = 40.00; 
+can't be be changed. 
+needs to be declared with a value when created. 
+
+
+
+
+the var keyword. 
+
+var keyword is used in old code but let and const should be used now. 
+old way would be: 
+var price = 20;
+main difference between Var / let is var won't error if not declared before being used further up the code. 
+always use the let keyword not VAR !!!!
+
+
+
+
+
+Types & Operators. 
+
+Intro. 
+variables have types. 
+operators such as (+ * -)
+
+
+
+
+Numbers in JS. 
+Operator typeOf - operates or changes a value. 
+type of price would show "number" as a string. 
+
+let price = 30,
+    name = 'Hiking Boots',
+    discounted = false;
+showMessage(typeof price);
+
+
+once number in a variable can perform math operations on it. 
+
+for example adding : price = price + 1; 
+ minusing price = price - 1; 
+ multiplying price = price * 8; 
+ division price = price / 3;
+ remainder price = price % 4;
+
+does the same but shorthand. 
+price += 5;
+price -= 5;
+price *= 5;
+price /= 5;
+price %= 5;
+
+
+can work with multiple variables with operators. 
+showMessage(price * taxRate);
+
+Increments Operators
+These should be after the variable. 
+++ increments by 1. 
+-- decrements by -1. 
+
+
+
+
+
+Operator Precedence. 
+be careful of this with numbers in JS. 
+let price = 3 + 2 * 2 makes price 7 which is wrong due to the Precedence.
+multiplication and division and remainder always comes first in maths.
+MDN Operator precedence - check this chart of precedence of operators in JS. 
+
+to bypass the rules use parenthesis (anything in here will execute first)
+let price = (3 + 2) * 2;
+
+
+
+
+Number Precision.
+JS works with floating point numbers, large numbers with many decimal places this can cause issues. 
+eg. 
+price = 1.1 + 1.3 = 2.4000000000004
+this is inaccurate if you are comparing them. 
+
+
+
+
+Negative Numbers. 
+let price = -20;
+subtracting negative numbers 
+put em en parenthesis to make them clear that they are negative.
+let price = -20 - (-2);
+
+
+
+
+
+Strings
+strings are text such as Hello World ! 
+need to be enclosed in single or double quotes. 
+to get quotes to schow need to use escape chars. 
+
+let message = "Hello \"World\"" would display Hello "World"
+
+Escape notation can be found on the MDN for JS on Google. 
+
+\n is new line.
+\t is a tab. 
+
+string can be created with a backtick `Hello World` these allow interperlation can put variables in the string.
+
+let name = `Mike`;
+let message = `Hello ${name}` would be Hello Mike.
+Backticks also allow you to enter new lines in a string without escape chars. 
+
+
+
+
+Manipulating Strings. 
+Can manipulate strings concatonation with + to add strings together. 
+let message = "Hello" 
+message = messsage + world would make the message Hello World. 
+takes one string and adds another string to it. no other math operators. 
+Can use methods but will be covered later, an action we can take on a string. 
+message.toLowerCase() - coverts to lower case. 
+message.substring(1) - makes string smaller would drop the H. 
+MDN String reference for all of this. 
+
+can also use properties. such as
+message = message.length would return the length of the string as a number. 
+
+
+
+
+Covert Strings & Numbers. 
+for example 
+let amount = 123;
+amount = amount.toString();
+showMessage(amount);
+would convert it to a string "123" rather than 123.
+
+covert string to number. 
+let amount = Number.parseFloat ("123.12");
+cannot deal with non numerical values in the string at the start but can be later in the string. 
+
+
+
+
+Boolean Variables.
+can be true or false. only 2 values
+true = yes / 1  false = no / 0 
+common operation on booleans is flipping them. ie true = false. 
+let saved = true;
+saved = !saved would equal false. 
+
+
+
+
+Null & Undefinded. 
+null = null undefined = undefined
+if a var is setup with no value it will be undefined
+if a var is set to null it will wipe out the value, thats JS best practice. 
+when wiping values use null not undefined.
+
+
+
+
+Objects & Symbols
+objects are a very important part of JS. 
+the below is an example of an object. 
+let person = {
+    firstName: "John"
+    lastName: "Oram"
+};
+
+showMessage(person.firstName); - would show the firstName property of the person Object
+
+Object is a data type.
+
+Symbols can be used as property in a object but it is hidden, you may want to hide the property. 
+
+
+
+
+
+
+Program Flow. 
+Sometimes you want to include code / loop code. this refers to program flow. 
+
+
+
+
+
+Conditionals using if()
+if condition is true execute block if not don't. 
+if (5 === 5) {
+    console.log("yes");
+}
+
+code block is code between opening and closing {}. 
+
+let state = "FL";
+let taxPercent = 0;
+
+if (state === "FL) {
+    taxPercent = 7;
+}
+
+console.log(taxPercent) - would show 7 in the console. 
+
+let state = "FL";
+let taxPercent = 7;
+
+if (state !== "FL) {
+    taxPercent = 0;
+}
+
+console.log(taxPercent) - would show 7 in the console as the state is equal to Florida
+
+> greater than 
+< less than 
+>= greater or equal 
+<= less than or equal
+=== equality same and same type. 
+!== not ineditcally equal. 
+
+
+
+
+
+Truthy and Falsy. 
+
+Falsy = false , 0 "" '' or empty strings, null, undefined, NaN.
+
+Truthy = everything not Falsy. 
+
+
+if ( +(1.1 + 1.3).toFixed(2) === 2.4) {
+    showMessage(true);
+}
+
+
+
+
+if ... else 
+will execute if condition of If is not true. 
+
+let state = 'FL';
+let taxPercent;
+
+if (state === 'FL') {
+    taxPercent = 7
+}
+else {
+    taxPercent = 0;
+}
+
+console.log(taxPercent); - would show 7 if state is not FL it would be 0. 
+
+
+let state = 'FL';
+let taxPercent;
+
+if (state === 'FL') {
+    taxPercent = 7
+}
+else if (state === 'NY') {
+    taxPercent = 8.875;
+}
+
+always use curly braces. 
+
+
+
+
+Comparing === & ==
+
+Testing for equality using === 
+testing for == does not compare the type of the data. it will convert it. 
+
+!== not equal 
+
+!= java will convert the type. 
+
+always use !== or ===
+
+
+
+The ternary operator. 
+
+works with 3 differnt values - shortcut for if... else. 
+
+// (condition) ? true-statement : false-statement. 
+
+let message = (price > 10) ? 'expensive' : 'cheap';
+showMessage(message); //expensive
+
+
+
+
+
+Block scope using let. 
+var declared in a block are only available in the block. 
+it will dissapear after the code block has been run. 
+
+if (true) {
+    let value = 'yes';
+}
+console.log(value); - this won't be defined as the variable is initialized in the block and keeps in the block. 
+
+
+
+
+Looping with for()
+this will loop overcode and execute it over and over again. 
+
+for (let i = 0: i < 3; i++) {
+    console.log(i);
+}
+
+would show 0 1 2 in the console and then exit the for loop. 
+
+common bug is the condition <= >= careful using these if you want less than or less than equal or so on. 
+
+Or a loop can never finish. in the above i-- would loop forever (Infinite loop) control C will kill this in the console.
+
+
+
+
+Looping with while()
+let count = 1;
+white (count < 5) {
+    console.log(count);
+    count++;
+}
+
+would show 1 2 3 4 in the console 
+i is traditional to use in loops. - needs to complete or it will infinite loop. 
+
+
+
+
+do While () loop. 
+
+used when you want the code to run atleast once. 
+
+let count = 1;
+do {
+    console.log(count);
+    count++;
+} while (count < 5);
+
+1 2 3 4 would show in the console. 
+
+tests the while condition after the do runs rather than before in a while() loop. 
+
+
+
+
+Functions
+Block of code that is named / variable can use that to execute the code. most code will be a function. 
+your not writing it in a function its in a global scope that will be pretty limited. 
+
+
+
+
+Function Basics. 
+named block of code. 
+
+function showMessage() {
+    console.log("in a function");
+}
+
+anything between {} is the body of the function
+
+showMessage;
+showMessage; 
+would show the message twice in the console. 
+
+
+
+Function Expressions.
+let fn = function () {
+
+}
+
+fn(); calls the function. 
+
+Assinging a function to an expression. 
+
+let myFunction = function logging () {
+    console.log("Here is a message");
+}
+
+logMessage();
+logMessage();
+
+if you calling logging it wouldn't be defined. 
+
+
+
+passing information to functions. 
+pass info to send data to the function. 
+
+function showMessage (message) {
+    console.log(message);
+}
+
+showMessage("First Message");
+showMessage("Second Message);
+
+function showMessage(message, anotherMessage) {
+    console.log(message, anotherMessage);
+}
+
+showMessage("First Message", "Second Message");
+
+
+let myFunction = function (message, firstName) {
+    console.log(message);
+    console.log(firstName);
+}
+
+myFunction("Hello", "Mike");
+
+
+need to make sure the paremeters are assigned data
+
+
+
+
+Function Return Values. 
+
+Can get info out of a fucntion using return keyword. 
+
+function getSecretCode(value) {
+    let code = value * 42;
+    return code;
+}
+
+console.log(getSecretCode(2)); would return 84 in the console. 
+
+if no return it will return undefined
+
+cleaner to return the variable created. 
+
+function getSecretCode(value) {
+    let code = value * 42;
+    return code;
+}
+
+let secretCode = getSecretCode(2);
+showMessage(secretCode);
+
+
+
+
+Function scope
+function scopes have there own scope, paramenters and variables only exist within the function, once done they dissapear. 
+
+function getSecretCode(value) {
+    let code = value * 42;
+    return code;
+}
+
+let secretCode = getSecretCode(2);
+console.log(code); // this would return undefined as its calling a variable outside of the scope of the function. 
+
+let key = 42;
+function getSecretCode(value) {
+    let code = value * key;
+    return code;
+}
+
+let secretCode = getSecretCode(2);
+console.log(secretCode); // functions can access global scope so this will work. 
+
+
+let key = 42;
+function getSecretCode(value) {
+    
+    let keyGenerator = function() {
+        let key = 12;
+        console.log('in keyGenerator', key);
+        return key;
+    }
+    
+    let code = value * keyGenerator();
+    cosnole.log("in secretCode", key);
+    return code;
+}
+
+let secretCode = getSecretCode(2);
+
+this would show key as 12 in the keyGenerator but 42 in getSecretCode due to it using global scope as keyGenerator has finished. 
+
+
+
+
+Using functions to modify webpages. 
+
+function changePercentOff(percentage) {
+    document.getElementById('percent-off').textContent = percentage + "% OFF";
+}
+
+changePercentOff(30);
+
+
+
+
+
+
+Objects and the DOM. 
+Objects can contain multiple properties / data - document object model (DOM).
+
+
+
+
+Object Properties.
+Objects usually have several properties. 
+Object is a group of values or properties
+
+let person = { 
+    name: "John",
+    age: 32,
+    partTime: false
+};
+
+console.log(person.name); //John
+console.log(person.age); //32
+console.log(person.partTime); //false
+
+let mySymbol = Symbol();
+
+let person = {
+    name: 'John',
+    age: 32,
+    partTime: false,
+    [mySymbol]: 'secretInformation'
+};
+
+person.age = 40;
+person['name'] = 'Mike';
+
+
+
+
+Object Methods.
+can attach functions to objects these are called methods. 
+
+this keyword to access data in its own object during a object method.always check this is there if using data from current object. 
+
+
+let mySymbol = Symbol();
+
+let person = {
+    name: 'John',
+    age: 32,
+    partTime: false,
+    [mySymbol]: 'secretInformation',
+    showInfo: function(realAge) {
+        showMessage(this.name + " is " + realAge)
+    }
+};
+
+person.age = 40;
+person['name'] = 'Mike';
+
+person.showInfo(34);
+
+
+
+
+
+Passing Objects to functions. 
+
+let person = {
+    name: 'John',
+    age: 32,
+    partTime: false
+}
+
+function incrementAge(person){
+    person.age++;
+}
+
+incrementAge(person);
+
+showMessage(person.age);
+
+cant change the object but can change the data due to passing by refernce. 
+
+
+
+
+standard built in objects. 
+
+check the MDN for Javescript - standard built in Objects
+Date object
+
+let now = new Date();
+showMessage(now.toDateString());
+
+
+Math built in object. 
+showMessage(Math.abs(-42));
+showMessage(Math.random());
+
+
+String
+let s = "hello";
+showMessage(s.charAt(0));
+
+
+number object
+check the MDN on it. 
+
+
+
+
+The Document Object Model (DOM)
+used for JS on webpages. 
+function showMessage(message){
+    document.getElementById('message').textContent = message;
+}
+
+MDN DOM model look through it its uge. 
+Tags are elements in HTML (h1 etc)
+
+
+
+
+Styling DOM elements
+style using JS. 
+MDN HTML Element getElement returns it.
+ele.style.color = blue;
+
+const header = document.getElementById('message');
+
+header.style.color = 'blue';
+
+dashes don't work. use camelCase instead
+header.style.fontWeight = 400;
+
+
+
+
+Detecting Button Clicks in JS from a HTML page. 
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function(){
+    console.log('click');
+});
+
+
+
+
+Showing and hiding dom elements. 
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function(){
+    const review = document.getElementById('review');
+
+    review.classList.remove('d-none');
+});
+
+
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function(){
+    const review = document.getElementById('review');
+    if(review.classList.contains('d-none')) {
+        review.classList.remove('d-none');
+        button.textContent = "Close Review";
+    }
+    else {
+        review.classList.add('d-none');
+        button.textContent = "See Review";
+    }
+});
+
+
+MDN for DOM and Events. 
+
+
+
+
+
+Arrays in JS. 
+Arrays hold multiple objects or values. 
+
+
+
+Creating & initializing an Array. 
+// create an array. 
+let values = []; // empty array. 
+
+let values = [1, 2, 3]; // 1 2 3 values has 3 elements. 
+
+let values = Array.of(1, 2, 3); // can be done using a method. 
+
+index starts at 0 for elements in an array. 
+arrays are objects. 
+const values = ['a', 'b', 'c'];
+console.log(Array.isArray(values)); // returns true. 
+
+MDN Array for more methods attached to the object.
+
+
+
+
+Accessing Array Items(elements).
+
+let values = ['a', 'b', 'c'];
+console.log(values[0]); // a
+console.log(values[1]); // b
+console.log(values[2]); // c
+console.log(values[3]); // undefined
+
+const values = ['a', 'b', 'c'];
+values[0] = 'aaa'
+console.log(values[0]);
+
+
+
+
+Manipulating Arrays. 
+
+//push 
+const values = ['a', 'b', 'c'];
+values.push('d');
+console.log(values); // a b c d
+
+adds to the end. 
+
+//pop()
+const values = ['a', 'b', 'c'];
+const last = values.pop();
+console.log(last); // c
+
+removes from the end
+
+//shift()
+const values = ['a', 'b', 'c'];
+const first = values.shift();
+console.log(first); // a
+
+takes the element from the front of the array., array will only contains 2 elements now. 
+
+//unshift()
+const values = ['b', 'c'];
+values.unshift();
+console.log(values); // a b c
+
+adds element to the beginning of the array. 
+
+
+
+
+slice() and splice()
+used commonly with arrays. 
+slice creates a new array 
+splice inserts deletes elements in an array. 
+
+//slice() 
+const values = ['a', 'b', c];
+const newValues = values.slice(1, 2); // first argument is where we start are slice / second argument is the ending element. 
+console.log(newValues); // b
+
+This leaves the original array the same. 
+
+newValues = values.slice(); // would copy the whole array.
+
+//splice()
+const values = ['a', 'b', c];
+values.splice(1, 1); // first arg index of element deleting / second is amount to delete. 
+console.log(values); // a c
+
+//splice() for inserting
+const values = ['a', 'b', c];
+values.splice(1, 0, 'foo'); // first arg index of element deleting / second is amount to delete. / third is what to insert 
+console.log(values); // a foo b c
+
+MDN has alot more on this topic. 
+
+
+Array searching and looping
+find index of a element using looping.
+
+//indexOf()
+const values = ['a', 'b', 'c'];
+console.log( values.indexOf('c') ); //2 
+console.log( values.indexOf('d') ); //-1 nothing in the search
+
+//filter()
+const values = ['a', 'b', 'c'];
+const set = values.filter(function(item){
+    return item > 'b'
+});
+console.log( set ); //c is the only item greater than C in the array. 
+
+//find()
+const values = ['a', 'bbb', 'c']; 
+const found = values.find(function(item){
+    return item.length > 1;
+})
+console.log( found ); // bbb matches first item thats longer than 1 ie bbb.
+
+//forEach()
+const values = ['a', 'b', 'c'];
+values.forEach(function(item) {
+    console.log(item);
+});
+//a b c execute a function on each element of the array.
+
+more methods on the MDN for Arrays. 
+
+
+
+
+Arrays in the DOM. 
+Arrays can be used to modify the DOM. 
+const containers = document.getElementsByClassName('container');
+containers[0].classList.add('d-none');
+console.log(containers);
+
+
+
+
+
+Scope & Hoisting.
+these are concepts that can throw you off. 
+global scope. 
+function scope.
+var & hoisting.
+undeclared variables.
+strict mode. 
+
+global scope.
+2 scopes in JS , global / function scope. 
+scope is the area in which you can access the variable. 
+
+coding directly in JS is Global scope. 
+
+let productId = 12345; //Global Scope. 
+
+function showProductID() {
+    console.log(productId)
+}
+
+showProductID();
+
+looks outward into the global scope to find productID.
+Global cope includes all JS files in a project.
+
+polluting globalscope = bad. too many variables being declared globally, can be confusing and create bugs. 
+
+only create 1 variable in the global scope. 
+
+const app = {
+    productId: 12345,
+    userName: 'Mike',
+    orderNumber: 789
+
+}; //Global Scope. 
+
+best practice is to do this as an object.
+functions in global scope. 
+
+
+
+
+Function Scope. 
+can only be accessed within the function if variable is declared in the function. 
+
+function showProductID() {
+    let productId = 12345;
+    
+    function fix() {
+        let productId = 6789;
+        console.log('in fix', productId);
+    }
+
+    fix();
+
+    console.log('in showProductId', productId);
+}
+
+showProductID();
+
+/*in fix 6789 
+in showProductId 12345*/
+
+
+
+
+
+var & hoisting. 
+use let or const. to avoid hoisting. 
+
+this doesn't apply to functions. 
+
+functions will execute before being declared. 
+
+JS runs over 2 passes. hositing fine for functions, bad for variables and constants avoid VAR. 
+
+
+
+
+
+Undeclared variables and strict mode. 
+in earlier JS could use variables before declaring them. 
+productId = 456;
+
+console.log(productId);
+this is bad. 
+
+'use strict';
+
+
+productId = 456;
+
+console.log(productId);
+
+this will stop it from happening. 
