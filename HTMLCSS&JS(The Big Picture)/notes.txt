@@ -310,3 +310,108 @@ you write your stylecode in the preprocessor
 
 compile it and you get the CSS.
 can be useful to increase your producivity. 
+
+
+
+
+
+
+
+JavaScript & Interacting with the Web. 
+"The glue of the web"
+used to make the web more interactive.
+
+Where did JS come from ? 
+JS is a high level interpreted programming language. 
+JS is not Java !
+
+1995 - First version of JavaScript
+1995 - first server side implementation of JS. 
+1996 - JS submitted to be standardized
+1997 - ECMAScript 1
+1998 - ECMAScript 2
+1999 - ECMAScript 3
+2000 - Work on ECMASCript 4
+2004 - ECMASCript 4 scrapped. 
+2007 - ECMAScript 3.1 started by message
+2009 - ECMAScript 5
+2011 - ECMAScript 5.1
+2015 - ECMAScript 2015
+''      ''  
+''      ''
+''      ''  
+''      ''
+2018
+
+JS runs everywhere.
+
+
+
+What is JavaScript. 
+
+Dynamic values in JS. 
+
+can be used to manipulate the browser / communicate with API's.
+
+can be written inline in HTML. 
+
+Can be written in a script block in the head element of the html wrapped in <script> tags. 
+
+
+can be linked as script in the body of the HTML and held in a seperate JS file. same as using external CSS in a document. 
+
+Can use JS to ineract with the Browser. 
+
+Can use variables and 
+
+
+Making AJAX calls. 
+can do lots of ineractive things with the browser without needing to refresh the page. 
+
+call an API using the JS. - process a document using JS in the browser. 
+
+JS can call server side resources without refreshing your browser to make interactive web applications. 
+
+refreshes the content without refreshing the page. 
+
+
+Browser support of JS. 
+
+Browsers don't always support the spec completely. 
+
+can use caniuse.com to check. 
+
+
+
+
+
+
+
+Working with JavaScript. 
+
+HTML / CSS / JS - document / style / interaction.
+
+Text Editors or IDE's (IDE's are better !)
+VS / Eclipse / Atom and many more. 
+
+JS Libraries
+JQuery 
+Dojo Toolkit
+Prototype.JS
+Boostrap
+Velocity.JS
+D3.js
+
+can help selecting HTML elements, boostrap has Jquery plugins for animations and the like. 
+
+these can speed up dev time. 
+
+
+Angular
+Backbone.jsReact
+TypeScript
+etc 
+
+learn how to use thme ontop of JS. 
+
+Angular - very popular to be more productive when creating web applications. 
